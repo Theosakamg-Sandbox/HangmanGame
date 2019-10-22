@@ -81,7 +81,7 @@ jacocoTestReport {
 
 pmd {
     pmdTest.enabled = false
-    toolVersion = '6.8.0'
+    toolVersion = '6.12.0'
     ruleSetFiles = files("${gradleExtra}/pmd_rules_lvl1.xml")
 
     ignoreFailures = true
