@@ -1,3 +1,10 @@
+/*
+ * FileWordProvider.java, HangMan Game
+ *
+ * Copyright © 2019 Mickael Gaillard / TACTfactory
+ * License    : all rights reserved
+ */
+
 package com.tactfactory.demo.hangmangame.words;
 
 public class FileWordProvider extends WordProviderBase {

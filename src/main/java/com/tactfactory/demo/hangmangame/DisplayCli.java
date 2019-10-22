@@ -1,3 +1,10 @@
+/*
+ * DisplayCli.java, HangMan Game
+ *
+ * Copyright © 2019 Mickael Gaillard / TACTfactory
+ * License    : all rights reserved
+ */
+
 package com.tactfactory.demo.hangmangame;
 
 import java.util.List;
@@ -98,7 +105,12 @@ public class DisplayCli {
 
         if (game.getCountTry() > 0) {
             // TODO (mickael) : Remove after Debug
-            System.out.println(String.format("Try %d, with %d errors, finished : %b", game.getCountTry(), game.getCountError(), game.isFinish()));
+            System.out.println(
+                    String.format("Try %d, with %d errors, finished : %b",
+                            game.getCountTry(),
+                            game.getCountError(),
+                            game.isFinish()));
+
             this.displayHangman(game.getCountError());
         }
 

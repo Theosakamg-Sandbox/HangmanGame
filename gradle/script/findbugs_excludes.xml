@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  findbugs_excludes.xml,
+  
+  Copyright © 2018 Mickael Gaillard / TACTfactory
+  Description :
+  Author(s)   : Mickael Gaillard <mickael.gaillard@tactfactory.com>
+  License     : all right reserved
+  Last update : Jan 01, 2018
+-->
+<FindBugsFilter>
+  <Match>
+    <Class name="~.*\.R\$.*"/>
+  </Match>
+  <Match>
+    <Or>
+
+    </Or>
+  </Match>
+  <Match>
+    <Bug pattern="RE_CANT_USE_FILE_SEPARATOR_AS_REGULAR_EXPRESSION" />
+  </Match>
+</FindBugsFilter>

@@ -1,3 +1,10 @@
+/*
+ * GameEngine.java, HangMan Game
+ *
+ * Copyright © 2019 Mickael Gaillard / TACTfactory
+ * License    : all rights reserved
+ */
+
 package com.tactfactory.demo.hangmangame;
 
 import java.util.Scanner;
@@ -15,7 +22,7 @@ public class GameEngine {
     public void run() {
         final Game game = this.makeNewGame();
 
-        try(Scanner scan = new Scanner(System.in)) {
+        try (Scanner scan = new Scanner(System.in)) {
             while (!game.isFinish()) {
                 this.display.step(game);
                 this.display.requestValue();

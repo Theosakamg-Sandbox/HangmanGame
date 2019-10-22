@@ -121,7 +121,7 @@
     <rule ref="rulesets/java/controversial.xml/DontImportSun"></rule>
     <rule ref="rulesets/java/controversial.xml/SuspiciousOctalEscape"></rule>
     <rule ref="rulesets/java/controversial.xml/CallSuperInConstructor"></rule>
-    <rule ref="rulesets/java/controversial.xml/UnnecessaryParentheses"></rule>
+    <rule ref="rulesets/java/unnecessary.xml/UselessParentheses"></rule>
     <rule ref="rulesets/java/controversial.xml/DefaultPackage"></rule>
     <rule ref="rulesets/java/controversial.xml/DataflowAnomalyAnalysis">
         <properties>
@@ -145,7 +145,7 @@
     </rule>
 
     <!-- See http://pmd.sourceforge.net/pmd-5.0.1/rules/java/design.html -->
-    <rule ref="rulesets/java/design.xml/UseSingleton"></rule>
+    <rule ref="rulesets/java/design.xml/UseUtilityClass"></rule>
     <rule ref="rulesets/java/design.xml/SimplifyBooleanReturns"></rule>
     <rule ref="rulesets/java/design.xml/SimplifyBooleanExpressions"></rule>
     <rule ref="rulesets/java/design.xml/SwitchStmtsShouldHaveDefault"></rule>
@@ -181,9 +181,9 @@
     <rule ref="rulesets/java/design.xml/PositionLiteralsFirstInComparisons"></rule>
     <!--rule ref="rulesets/java/design.xml/UnnecessaryLocalBeforeReturn"></rule-->
     <rule ref="rulesets/java/design.xml/NonThreadSafeSingleton"></rule>
-    <rule ref="rulesets/java/design.xml/UncommentedEmptyMethod"></rule>
+    <rule ref="rulesets/java/design.xml/UncommentedEmptyMethodBody"></rule>
     <rule ref="rulesets/java/design.xml/UncommentedEmptyConstructor"></rule>
-    <rule ref="rulesets/java/design.xml/AvoidConstantsInterface"></rule>
+    <rule ref="rulesets/java/design.xml/ConstantsInInterface"></rule>
     <rule ref="rulesets/java/design.xml/PreserveStackTrace"></rule>
     <rule ref="rulesets/java/design.xml/UseCollectionIsEmpty"></rule>
     <rule ref="rulesets/java/design.xml/ClassWithOnlyPrivateConstructorsShouldBeFinal"></rule>
@@ -354,7 +354,7 @@
     <rule ref="rulesets/java/strings.xml/AvoidStringBufferField"></rule>
 
     <!-- See http://pmd.sourceforge.net/pmd-5.0.1/rules/java/typeresolution.html -->
-    <rule ref="rulesets/java/typeresolution.xml/LooseCoupling"></rule>
+    <rule ref="rulesets/java/coupling.xml/LooseCoupling"></rule>
     <rule ref="rulesets/java/typeresolution.xml/CloneMethodMustImplementCloneable"></rule>
     <rule ref="rulesets/java/typeresolution.xml/UnusedImports"></rule>
 
@@ -367,7 +367,7 @@
             <property name="ignoreAnnotations" value="false"/>      <!-- Ignore annotations -->
         </properties>
     </rule>
-    <rule ref="rulesets/java/unnecessary.xml/UselessParentheses"></rule>
+    <rule ref="rulesets/java/unnecessary.xml/UnnecessaryParentheses"></rule>
     <rule ref="rulesets/java/unnecessary.xml/UnnecessaryModifier"></rule>
 
     <!-- See http://pmd.sourceforge.net/pmd-5.0.1/rules/java/unusedcode.html -->

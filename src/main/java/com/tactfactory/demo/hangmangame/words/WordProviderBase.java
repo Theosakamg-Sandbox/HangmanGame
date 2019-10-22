@@ -1,3 +1,10 @@
+/*
+ * WordProviderBase.java, HangMan Game
+ *
+ * Copyright © 2019 Mickael Gaillard / TACTfactory
+ * License    : all rights reserved
+ */
+
 package com.tactfactory.demo.hangmangame.words;
 
 import java.time.LocalDateTime;
@@ -8,7 +15,7 @@ import java.util.Random;
 
 public abstract class WordProviderBase implements WordProvider {
 
-    protected static final Random ran = new Random(LocalDateTime.now().getNano());
+    protected static final Random random = new Random(LocalDateTime.now().getNano());
 
     protected int miniWordSize = 1;
 
@@ -16,7 +23,7 @@ public abstract class WordProviderBase implements WordProvider {
 
     @Override
     public String getRandom() {
-        int idx = WordProviderBase.ran.nextInt(this.words.size()-1);
+        int idx = WordProviderBase.random.nextInt(this.words.size() - 1);
         final String word = this.words.get(idx);
 
         return word;
