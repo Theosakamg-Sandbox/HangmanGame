@@ -23,20 +23,20 @@ public class DisplayCli {
     "═╩═══════";
     */
 
-    private static final String ERR10 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     ║\n ║\n═╩═══════";
-    private static final String ERR9 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     |\n ║\n═╩═══════";
-    private static final String ERR8 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║\n ║\n═╩═══════";
-    private static final String ERR7 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\n ║\n ║\n═╩═══════";
-    private static final String ERR6 = " ╔═════╤═\n ║     │\n ║     O\n ║     │\n ║\n ║\n═╩═══════";
-    private static final String ERR5 = " ╔═════╤═\n ║     │\n ║     O\n ║\n ║\n ║\n═╩═══════";
-    private static final String ERR4 = " ╔═════╤═\n ║     │\n ║\n ║\n ║\n ║\n═╩═══════";
-    private static final String ERR3 = " ╔═════╤═\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
-    private static final String ERR2 = "\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
-    private static final String ERR1 = "\n\n\n\n\n\n═╩═══════";
-    private static final String ERR0 = "\n\n\n\n\n\n";
+    public static final String ERR10 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     ║\n ║\n═╩═══════";
+    public static final String ERR9 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     |\n ║\n═╩═══════";
+    public static final String ERR8 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║\n ║\n═╩═══════";
+    public static final String ERR7 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\n ║\n ║\n═╩═══════";
+    public static final String ERR6 = " ╔═════╤═\n ║     │\n ║     O\n ║     │\n ║\n ║\n═╩═══════";
+    public static final String ERR5 = " ╔═════╤═\n ║     │\n ║     O\n ║\n ║\n ║\n═╩═══════";
+    public static final String ERR4 = " ╔═════╤═\n ║     │\n ║\n ║\n ║\n ║\n═╩═══════";
+    public static final String ERR3 = " ╔═════╤═\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
+    public static final String ERR2 = "\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
+    public static final String ERR1 = "\n\n\n\n\n\n═╩═══════";
+    public static final String ERR0 = "\n\n\n\n\n\n";
 
-    private static final String SPACE = " ";
-    private static final Character CASE = '_';
+    public static final String SPACE = " ";
+    public static final Character CASE = '_';
 
     public void displayMask(final List<Character> value) {
         final StringBuilder builder = new StringBuilder(value.size());
