@@ -14,6 +14,7 @@ apply plugin: com.github.spotbugs.SpotBugsPlugin
 apply plugin: 'jacoco'
 apply plugin: 'pmd'
 apply plugin: 'build-dashboard'
+apply plugin: 'jdepend'
 
 def gradleExtra="${project.rootDir}/gradle/script"
 def reportDir="${project.buildDir}/reports"
@@ -22,6 +23,7 @@ check.dependsOn 'cpd'
 
 repositories {
     jcenter()
+    mavenCentral()
     maven { url 'https://plugins.gradle.org/m2/' }
 }
 
@@ -107,6 +109,13 @@ task cpd {
             }
         }
     }
+}
+
+// JDepend
+
+jdepend {
+    ignoreFailures = true
+    jdependTest.enabled = false
 }
 
 // Test case
