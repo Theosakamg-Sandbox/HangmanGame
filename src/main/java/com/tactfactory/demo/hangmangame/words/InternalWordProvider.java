@@ -9,19 +9,6 @@ package com.tactfactory.demo.hangmangame.words;
 
 public class InternalWordProvider extends WordProviderBase {
 
-    public InternalWordProvider() {
-        super();
-
-        try {
-            this.addWord("Bonjour");
-            this.addWord("Pendu");
-            this.addWord("Enfant");
-
-        } catch (WordException e) {
-            e.printStackTrace();
-        }
-    }
-
     @Override
     public void addWord(String word) throws WordException {
         if (word.length() > this.miniWordSize) {
