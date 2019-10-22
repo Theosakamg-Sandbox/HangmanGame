@@ -1,0 +1,17 @@
+/// Theosaka#6641
+
+plugins {
+    id 'java'
+    id 'eclipse'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:28.1-jre'
+
+    testImplementation 'junit:junit:4.12'
+}
+
