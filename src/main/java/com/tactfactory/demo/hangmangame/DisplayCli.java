@@ -96,6 +96,7 @@ public class DisplayCli {
             System.out.println(ERR0);
             break;
         default:
+            System.out.println();
             break;
         }
     }

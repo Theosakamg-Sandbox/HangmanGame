@@ -93,6 +93,10 @@ public class DisplayCliTest {
         this.outContent.reset();
         this.item.displayHangman(10);
         Assert.assertTrue("ERR10", this.outContent.toString().contains(DisplayCli.ERR10));
+
+        this.outContent.reset();
+        this.item.displayHangman(11);
+        Assert.assertTrue("Empty", this.outContent.toString().contains(""));
     }
 
     @Test
@@ -100,6 +104,11 @@ public class DisplayCliTest {
         final GameMock game = new GameMock();
         this.item.step(game);
 
+        Assert.assertFalse(this.outContent.toString().equals(""));
+
+        game.setCountTry(1);
+        this.outContent.reset();
+        this.item.step(game);
         Assert.assertFalse(this.outContent.toString().equals(""));
     }
 

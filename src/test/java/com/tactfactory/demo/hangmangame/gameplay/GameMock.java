@@ -30,4 +30,9 @@ public class GameMock extends GameBase {
         this.win = isWin;
     }
 
+    public void setCountTry(int countTry) {
+        this.countTry = countTry;
+
+    }
+
 }

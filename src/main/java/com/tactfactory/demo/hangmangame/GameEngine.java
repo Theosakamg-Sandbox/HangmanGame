@@ -21,7 +21,6 @@ public class GameEngine {
     private final DisplayCli display = new DisplayCli();
 
     public void run() {
-        final Game game = this.makeNewGame();
         try {
             this.words.addWord("Bonjour");
             this.words.addWord("Pendu");
@@ -30,6 +29,8 @@ public class GameEngine {
         } catch (WordException e) {
             e.printStackTrace();
         }
+
+        final Game game = this.makeNewGame();
 
         try (Scanner scan = new Scanner(System.in)) {
             while (!game.isFinish()) {
@@ -42,49 +43,6 @@ public class GameEngine {
 
             this.display.step(game);
             this.display.resultMessage(game);
-
-//        game.submitChar('n');
-//        this.display.step(game);
-//
-//        game.submitChar('o');
-//        this.display.step(game);
-//
-//        game.submitChar('e');
-//        this.display.step(game);
-//
-//        game.submitChar('b');
-//        this.display.step(game);
-//
-//        game.submitChar('j');
-//        this.display.step(game);
-//
-//        game.submitChar('u');
-//        this.display.step(game);
-//
-//        game.submitChar('r');
-//        this.display.step(game);
-//
-//        game.submitChar('a');
-//        this.display.step(game);
-//
-//        game.submitChar('b');
-//        this.display.step(game);
-//
-//        game.submitChar('c');
-//        this.display.step(game);
-//
-//        game.submitChar('d');
-//        this.display.step(game);
-//
-//        game.submitChar('f');
-//        this.display.step(game);
-//
-//        game.submitChar('g');
-//        this.display.step(game);
-//
-//        game.submitChar('h');
-//        this.display.step(game);
-
         }
     }
 
