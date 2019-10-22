@@ -1,0 +1,116 @@
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.com.github.spotbugs:spotbugs-gradle-plugin:2.0.0"
+  }
+}
+
+apply plugin: 'checkstyle'
+apply plugin: com.github.spotbugs.SpotBugsPlugin
+apply plugin: 'jacoco'
+apply plugin: 'pmd'
+apply plugin: 'build-dashboard'
+
+def gradleExtra="${project.rootDir}/gradle/script"
+def reportDir="${project.buildDir}/reports"
+
+check.dependsOn 'cpd'
+
+repositories {
+    jcenter()
+    maven { url 'https://plugins.gradle.org/m2/' }
+}
+
+// CheckStyle
+
+checkstyle {
+    toolVersion '5.6'
+    checkstyleTest.enabled = false
+    ignoreFailures = true
+    showViolations = true
+    configFile file("${gradleExtra}/checkstyle_rules_lvl1.xml")
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}
+
+// FindBug
+
+spotbugs {
+    toolVersion '3.1.12'
+    spotbugsTest.enabled = false
+    ignoreFailures = true
+    effort = "max"
+    reportLevel = "high"
+    excludeFilter = new File("${gradleExtra}/findbugs_excludes.xml")
+}
+
+tasks.withType(com.github.spotbugs.SpotBugsTask) {
+    reports {
+        xml.enabled = true
+        html.enabled = false
+    }
+}
+
+// Jacoco
+
+jacoco {
+    toolVersion = "0.8.2"
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled true
+    }
+}
+
+
+// Pmd
+
+pmd {
+    pmdTest.enabled = false
+    toolVersion = '6.8.0'
+    ruleSetFiles = files("${gradleExtra}/pmd_rules_lvl1.xml")
+
+    ignoreFailures = true
+}
+
+tasks.withType(Pmd) {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}
+
+// CPD
+
+task cpd {
+    doLast {
+        def cpdOutputDir = new File("${reportDir}/cpd")
+        cpdOutputDir.mkdirs()
+
+        ant.taskdef(name: 'cpd', classname: 'net.sourceforge.pmd.cpd.CPDTask', classpath: configurations.pmd.asPath)
+
+        ant.cpd(minimumTokenCount: '100', format: 'xml', outputFile: new File(cpdOutputDir, 'cpd.xml')) {
+            fileset(dir: 'src') {
+                include(name: '**/*.java')
+            }
+        }
+    }
+}
+
+// Test case
+
+test {
+    ignoreFailures = true
+}

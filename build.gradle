@@ -5,6 +5,8 @@ plugins {
     id 'eclipse'
 }
 
+apply from: 'gradle/script/quality_rules.gradle'
+
 repositories {
     jcenter()
 }

@@ -1,0 +1,6 @@
+^\/\**$
+^ \* .*$
+^ \*$
+^ \* Copyright © 20\d{2}(-20\d{2})? Mickael Gaillard \/ TACTfactory.*$
+^ \* License    : all rights reserved*$
+^ \**\/$

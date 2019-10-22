@@ -4,8 +4,7 @@ public class FileWordProvider extends WordProviderBase {
 
     @Override
     public void addWord(String word) throws WordException {
-
-
+        // TODO make code.
     }
 
 }

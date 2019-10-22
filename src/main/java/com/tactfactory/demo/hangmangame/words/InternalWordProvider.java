@@ -3,6 +3,8 @@ package com.tactfactory.demo.hangmangame.words;
 public class InternalWordProvider extends WordProviderBase {
 
     public InternalWordProvider() {
+        super();
+
         try {
             this.addWord("Bonjour");
             this.addWord("Pendu");
@@ -15,7 +17,7 @@ public class InternalWordProvider extends WordProviderBase {
 
     @Override
     public void addWord(String word) throws WordException {
-        if (word.length() > 1) {
+        if (word.length() > this.miniWordSize) {
             this.words.add(normalize(word));
         } else {
             throw new WordException("To short word");

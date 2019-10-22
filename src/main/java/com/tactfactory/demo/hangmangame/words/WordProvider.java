@@ -6,4 +6,8 @@ public interface WordProvider {
 
     String getRandom();
 
+    WordProvider setMiniWordSize(int miniWordSize);
+
+    int getMiniWordSize();
+
 }

@@ -2,6 +2,8 @@ package com.tactfactory.demo.hangmangame.gameplay;
 
 public class StdGame extends GameBase {
 
+    private static final int MAX_ERROR = 10;
+
     public StdGame(final String word) {
         super(word);
     }
@@ -38,7 +40,7 @@ public class StdGame extends GameBase {
             if (!checkFound) {
                 this.countError++;
 
-                if (this.countError == 10) {
+                if (this.countError == MAX_ERROR) {
                     this.finish = true;
                 }
             }

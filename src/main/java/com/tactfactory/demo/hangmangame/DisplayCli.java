@@ -16,30 +16,33 @@ public class DisplayCli {
     "═╩═══════";
     */
 
-    static final String ERR10 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     ║\n ║\n═╩═══════";
-    static final String ERR9 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     |\n ║\n═╩═══════";
-    static final String ERR8 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║\n ║\n═╩═══════";
-    static final String ERR7 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\n ║\n ║\n═╩═══════";
-    static final String ERR6 = " ╔═════╤═\n ║     │\n ║     O\n ║     │\n ║\n ║\n═╩═══════";
-    static final String ERR5 = " ╔═════╤═\n ║     │\n ║     O\n ║\n ║\n ║\n═╩═══════";
-    static final String ERR4 = " ╔═════╤═\n ║     │\n ║\n ║\n ║\n ║\n═╩═══════";
-    static final String ERR3 = " ╔═════╤═\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
-    static final String ERR2 = "\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
-    static final String ERR1 = "\n\n\n\n\n\n═╩═══════";
-    static final String ERR0 = "\n\n\n\n\n\n";
+    private static final String ERR10 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     ║\n ║\n═╩═══════";
+    private static final String ERR9 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║     |\n ║\n═╩═══════";
+    private static final String ERR8 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\\\n ║\n ║\n═╩═══════";
+    private static final String ERR7 = " ╔═════╤═\n ║     │\n ║     O\n ║    /│\n ║\n ║\n═╩═══════";
+    private static final String ERR6 = " ╔═════╤═\n ║     │\n ║     O\n ║     │\n ║\n ║\n═╩═══════";
+    private static final String ERR5 = " ╔═════╤═\n ║     │\n ║     O\n ║\n ║\n ║\n═╩═══════";
+    private static final String ERR4 = " ╔═════╤═\n ║     │\n ║\n ║\n ║\n ║\n═╩═══════";
+    private static final String ERR3 = " ╔═════╤═\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
+    private static final String ERR2 = "\n ║\n ║\n ║\n ║\n ║\n═╩═══════";
+    private static final String ERR1 = "\n\n\n\n\n\n═╩═══════";
+    private static final String ERR0 = "\n\n\n\n\n\n";
 
-    public void displayMask(List<Character> value) {
+    private static final String SPACE = " ";
+    private static final Character CASE = '_';
+
+    public void displayMask(final List<Character> value) {
         final StringBuilder builder = new StringBuilder(value.size());
 
         for (int i = 0; i < value.size(); i++) {
             Character letter = value.get(i);
 
             if (letter == null) {
-                letter = '_';
+                letter = CASE;
             }
 
             if (builder.length() > 0) {
-                builder.append(' ');
+                builder.append(SPACE);
             }
 
             builder.append(letter);

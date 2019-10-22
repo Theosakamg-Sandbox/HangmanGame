@@ -3,16 +3,17 @@ package com.tactfactory.demo.hangmangame.gameplay;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class GameBase implements Game {
 
-    protected boolean finish = false;
-    protected boolean win = false;
-    protected int countError = 0;
-    protected int countTry = 0;
+    protected boolean finish;
+    protected boolean win;
+    protected int countError;
+    protected int countTry;
 
-    protected final HashMap<Integer, Character> wordSearchMap = new HashMap<>();
-    protected final HashMap<Integer, Character> wordfindedMap = new HashMap<>();
+    protected final Map<Integer, Character> wordSearchMap = new HashMap<>();
+    protected final Map<Integer, Character> wordfindedMap = new HashMap<>();
 
     public GameBase(final String word) {
         for (int i = 0; i < word.length(); i++) {

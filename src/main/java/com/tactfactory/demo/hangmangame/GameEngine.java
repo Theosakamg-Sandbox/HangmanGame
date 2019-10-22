@@ -15,7 +15,7 @@ public class GameEngine {
     public void run() {
         final Game game = this.makeNewGame();
 
-        try(final Scanner scan = new Scanner(System.in)) {
+        try(Scanner scan = new Scanner(System.in)) {
             while (!game.isFinish()) {
                 this.display.step(game);
                 this.display.requestValue();
