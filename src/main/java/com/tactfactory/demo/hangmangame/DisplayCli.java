@@ -11,6 +11,9 @@ import java.util.List;
 
 import com.tactfactory.demo.hangmangame.gameplay.Game;
 
+/**
+ * Graphical Engine for Console.
+ */
 public class DisplayCli {
 
     /*
@@ -38,6 +41,10 @@ public class DisplayCli {
     public static final String SPACE = " ";
     public static final Character CASE = '_';
 
+    /**
+     * Display on console the ...
+     * @param value
+     */
     public void displayMask(final List<Character> value) {
         final StringBuilder builder = new StringBuilder(value.size());
 
@@ -58,6 +65,10 @@ public class DisplayCli {
         System.out.println(builder.toString());
     }
 
+    /**
+     * Display Hang-man state, depend of count error.
+     * @param countError of game.
+     */
     public void displayHangman(int countError) {
 
         switch (countError) {
@@ -101,6 +112,10 @@ public class DisplayCli {
         }
     }
 
+    /**
+     * Display global step. Mask + Hang-Man.
+     * @param game instance.
+     */
     public void step(Game game) {
         System.out.println("");
 
@@ -118,10 +133,17 @@ public class DisplayCli {
         this.displayMask(game.maskToDisplay());
     }
 
+    /**
+     * Display to request a value.
+     */
     public void requestValue() {
         System.out.println("Enter a charactere : ");
     }
 
+    /**
+     * Display result of Game.
+     * @param game instance.
+     */
     public void resultMessage(final Game game) {
         System.out.println();
         if (game.isWin()) {

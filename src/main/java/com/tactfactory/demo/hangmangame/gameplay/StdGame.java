@@ -9,6 +9,7 @@ package com.tactfactory.demo.hangmangame.gameplay;
 
 public class StdGame extends GameBase {
 
+    /** Maximum try (in errors). */
     private static final int MAX_ERROR = 10;
 
     public StdGame(final String word) {

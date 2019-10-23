@@ -7,6 +7,9 @@
 
 package com.tactfactory.demo.hangmangame.words;
 
+/**
+ * File implementation of Word provider.
+ */
 public class FileWordProvider extends WordProviderBase {
 
     @Override

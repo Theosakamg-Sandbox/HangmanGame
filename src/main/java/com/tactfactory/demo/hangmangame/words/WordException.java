@@ -7,6 +7,9 @@
 
 package com.tactfactory.demo.hangmangame.words;
 
+/**
+ * Exception of Word provider.
+ */
 public class WordException extends Exception {
 
     private static final long serialVersionUID = 1L;

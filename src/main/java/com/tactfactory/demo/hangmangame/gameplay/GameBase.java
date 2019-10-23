@@ -14,12 +14,22 @@ import java.util.Map;
 
 public abstract class GameBase implements Game {
 
+    /** State of Game */
     protected boolean finish;
+
+    /** Winning the game. */
     protected boolean win;
+
+    /** Number of Errors. */
     protected int countError;
+
+    /** Number of try. */
     protected int countTry;
 
+    /** Search word attribute. */
     protected final Map<Integer, Character> wordSearchMap = new HashMap<>();
+
+    /** Finded on word attribute. */
     protected final Map<Integer, Character> wordfindedMap = new HashMap<>();
 
     public GameBase(final String word) {

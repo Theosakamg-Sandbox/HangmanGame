@@ -12,23 +12,14 @@ import java.util.Scanner;
 import com.tactfactory.demo.hangmangame.gameplay.Game;
 import com.tactfactory.demo.hangmangame.gameplay.StdGame;
 import com.tactfactory.demo.hangmangame.words.InternalWordProvider;
-import com.tactfactory.demo.hangmangame.words.WordException;
 import com.tactfactory.demo.hangmangame.words.WordProvider;
 
 public class GameEngine {
 
-    private final WordProvider words = new InternalWordProvider();
+    private WordProvider words = new InternalWordProvider();
     private final DisplayCli display = new DisplayCli();
 
     public void run() {
-        try {
-            this.words.addWord("Bonjour");
-            this.words.addWord("Pendu");
-            this.words.addWord("Enfant");
-
-        } catch (WordException e) {
-            e.printStackTrace();
-        }
 
         final Game game = this.makeNewGame();
 
