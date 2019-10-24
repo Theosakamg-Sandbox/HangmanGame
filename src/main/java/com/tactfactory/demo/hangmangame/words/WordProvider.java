@@ -26,8 +26,16 @@ public interface WordProvider {
      */
     String getRandom();
 
-    WordProvider setMiniWordSize(int miniWordSize);
+    /**
+     * Set Minimum size of word.
+     * @param miniWordSize the size.
+     */
+    void setMiniWordSize(int miniWordSize);
 
+    /**
+     * Get Minimum size of word.
+     * @return the size.
+     */
     int getMiniWordSize();
 
 }

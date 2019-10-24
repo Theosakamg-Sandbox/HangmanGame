@@ -12,6 +12,9 @@ package com.tactfactory.demo.hangmangame.words;
  */
 public class InternalWordProvider extends WordProviderBase {
 
+    /**
+     * Constructor.
+     */
     public InternalWordProvider() {
         super();
 

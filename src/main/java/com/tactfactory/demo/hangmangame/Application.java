@@ -14,7 +14,7 @@ public final class Application {
 
     /**
      * End-point to start application.
-     * @param args
+     * @param args pass un cli.
      */
     public static void main(String[] args) {
         GameEngine app = new GameEngine();

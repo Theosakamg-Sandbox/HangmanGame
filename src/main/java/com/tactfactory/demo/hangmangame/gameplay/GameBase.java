@@ -12,18 +12,27 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lombok.Getter;
+
+/**
+ * Common Game play functions.
+ */
 public abstract class GameBase implements Game {
 
-    /** State of Game */
+    /** State of Game. */
+    @Getter
     protected boolean finish;
 
     /** Winning the game. */
+    @Getter
     protected boolean win;
 
     /** Number of Errors. */
+    @Getter
     protected int countError;
 
     /** Number of try. */
+    @Getter
     protected int countTry;
 
     /** Search word attribute. */
@@ -32,6 +41,10 @@ public abstract class GameBase implements Game {
     /** Finded on word attribute. */
     protected final Map<Integer, Character> wordfindedMap = new HashMap<>();
 
+    /**
+     * Constructor.
+     * @param word to this game-play.
+     */
     public GameBase(final String word) {
         for (int i = 0; i < word.length(); i++) {
             char letter = word.charAt(i);
@@ -48,23 +61,4 @@ public abstract class GameBase implements Game {
         return new ArrayList<>(this.wordfindedMap.values());
     }
 
-    @Override
-    public int getCountTry() {
-        return  this.countTry;
-    }
-
-    @Override
-    public int getCountError() {
-        return  this.countError;
-    }
-
-    @Override
-    public boolean isFinish() {
-        return this.finish;
-    }
-
-    @Override
-    public boolean isWin() {
-        return this.win;
-    }
 }

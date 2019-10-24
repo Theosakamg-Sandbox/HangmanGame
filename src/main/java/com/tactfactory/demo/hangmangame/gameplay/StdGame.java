@@ -7,11 +7,18 @@
 
 package com.tactfactory.demo.hangmangame.gameplay;
 
+/**
+ * Standard Implementation.
+ */
 public class StdGame extends GameBase {
 
     /** Maximum try (in errors). */
     private static final int MAX_ERROR = 10;
 
+    /**
+     * Constructor.
+     * @param word for play.
+     */
     public StdGame(final String word) {
         super(word);
     }

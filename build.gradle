@@ -9,10 +9,13 @@ apply from: 'gradle/script/quality_rules.gradle'
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
     implementation 'com.google.guava:guava:28.1-jre'
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
     testImplementation 'junit:junit:4.12'
 }

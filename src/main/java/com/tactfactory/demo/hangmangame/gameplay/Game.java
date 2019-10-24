@@ -9,9 +9,15 @@ package com.tactfactory.demo.hangmangame.gameplay;
 
 import java.util.List;
 
+/**
+ * GamePlay concept.
+ */
 public interface Game {
 
-    /** @return Mask of current Word discover. */
+    /**
+     * Mask of current Word discover.
+     * @return the mask.
+     */
     List<Character> maskToDisplay();
 
     /**
@@ -20,16 +26,28 @@ public interface Game {
      */
     void submitChar(Character value);
 
-    /** @return Number of try. */
+    /**
+     * Number of try.
+     * @return the value.
+     */
     int getCountTry();
 
-    /** @return Number of Error. */
+    /**
+     * Number of Error.
+     * @return the value.
+     */
     int getCountError();
 
-    /** @Return if Game is finish. (True if is finiched)*/
+    /**
+     * If Game is finish (True if is finished).
+     * @return the value.
+     */
     boolean isFinish();
 
-    /** @Return if Game is Win. */
+    /**
+     * If Game is Win.
+     * @return the value.
+     */
     boolean isWin();
 
 }

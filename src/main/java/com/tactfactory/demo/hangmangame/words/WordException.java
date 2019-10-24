@@ -14,6 +14,10 @@ public class WordException extends Exception {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * Constructor.
+     * @param string Message of Error.
+     */
     public WordException(String string) {
         super(string);
     }

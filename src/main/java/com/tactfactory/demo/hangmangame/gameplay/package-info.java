@@ -6,6 +6,6 @@
  */
 
 /**
- *
+ * Game-Play package.
  */
 package com.tactfactory.demo.hangmangame.gameplay;

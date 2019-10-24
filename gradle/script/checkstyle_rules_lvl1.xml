@@ -12,6 +12,10 @@
           "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
           "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 
+<!--!DOCTYPE module PUBLIC
+          "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+          "https://checkstyle.org/dtds/configuration_1_3.dtd"-->
+
 <!--
 
   Checkstyle configuration that checks the sun coding conventions from:
@@ -50,7 +54,7 @@
 
     <!-- Checks that a package-info.java file exists for each package.     -->
     <!-- See http://checkstyle.sf.net/config_javadoc.html#JavadocPackage -->
-    <!--module name="JavadocPackage"/-->
+    <module name="JavadocPackage"/>
 
     <!-- Checks whether files end with a new line.                        -->
     <!-- See http://checkstyle.sf.net/config_misc.html#NewlineAtEndOfFile -->
@@ -78,17 +82,17 @@
 
         <!-- Checks for Javadoc comments.                     -->
         <!-- See http://checkstyle.sourceforge.net/config_javadoc.html#JavadocMethod -->
-        <!--module name="JavadocMethod">
+        <module name="JavadocMethod">
             <property name="scope" value="public"/>
             <property name="allowUndeclaredRTE" value="true"/>
         </module>
         <module name="JavadocMethod">
             <property name="scope" value="protected"/>
             <property name="allowUndeclaredRTE" value="true"/>
-        </module-->
+        </module>
 
         <!-- See http://checkstyle.sourceforge.net/config_javadoc.html#JavadocStyle -->
-        <!--module name="JavadocStyle">
+        <module name="JavadocStyle">
             <property name="scope" value="public"/>
             <property name="checkEmptyJavadoc" value="true"/>
             <property name="endOfSentenceFormat" value="[\.]$"/>
@@ -97,23 +101,23 @@
             <property name="scope" value="protected"/>
             <property name="checkEmptyJavadoc" value="true"/>
             <property name="endOfSentenceFormat" value="[\.]$"/>
-        </module-->
+        </module>
 
         <!-- See http://checkstyle.sourceforge.net/config_javadoc.html#JavadocType -->
-        <!--module name="JavadocType">
+        <module name="JavadocType">
             <property name="scope" value="public"/>
         </module>
         <module name="JavadocType">
             <property name="scope" value="protected"/>
-        </module-->
+        </module>
 
         <!-- See http://checkstyle.sourceforge.net/config_javadoc.html#JavadocVariable -->
-        <!--module name="JavadocVariable">
+        <module name="JavadocVariable">
             <property name="scope" value="public"/>
         </module>
         <module name="JavadocVariable">
             <property name="scope" value="protected"/>
-        </module-->
+        </module>
 
 
 

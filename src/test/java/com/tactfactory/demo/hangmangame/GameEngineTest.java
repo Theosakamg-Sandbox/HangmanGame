@@ -48,4 +48,13 @@ public class GameEngineTest {
         engin.run();
     }
 
+    @Test
+    public void testRun2() {
+        // bonjurpedfat
+        GameEngineTest.this.enter("b\no\nn\nj\nu\nr\np\ne\nd\nf\na\nt\n");
+
+        GameEngine engin = new GameEngine();
+        engin.run();
+    }
+
 }

@@ -6,6 +6,6 @@
  */
 
 /**
- *
+ * Word Provider package.
  */
 package com.tactfactory.demo.hangmangame.words;

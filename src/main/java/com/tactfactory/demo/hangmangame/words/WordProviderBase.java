@@ -13,15 +13,20 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Common Implementation of Word Provider.
  */
 public abstract class WordProviderBase implements WordProvider {
 
-    /** Randomizer */
-    protected static final Random random = new Random(LocalDateTime.now().getNano());
+    /** Randomizer. */
+    protected static final Random RANDOM = new Random(LocalDateTime.now().getNano());
 
-    /** Size Minimal */
+    /** Size Minimal. */
+    @Getter
+    @Setter
     protected int miniWordSize = 1;
 
     /** Internal dictionary of words. */
@@ -29,7 +34,7 @@ public abstract class WordProviderBase implements WordProvider {
 
     @Override
     public String getRandom() {
-        int idx = WordProviderBase.random.nextInt(this.words.size() - 1);
+        int idx = WordProviderBase.RANDOM.nextInt(this.words.size() - 1);
         final String word = this.words.get(idx);
 
         return word;
@@ -43,25 +48,5 @@ public abstract class WordProviderBase implements WordProvider {
     protected static String normalize(String word) {
         return word.trim().toLowerCase(Locale.getDefault());
     }
-
-    /**
-     * @return the miniWordSize.
-     */
-    @Override
-    public int getMiniWordSize() {
-        return this.miniWordSize;
-    }
-
-    /**
-     * @param miniWordSize the miniWordSize to set.
-     * @return this.
-     */
-    @Override
-    public WordProvider setMiniWordSize(int miniWordSize) {
-        this.miniWordSize = miniWordSize;
-        return this;
-    }
-
-
 
 }
