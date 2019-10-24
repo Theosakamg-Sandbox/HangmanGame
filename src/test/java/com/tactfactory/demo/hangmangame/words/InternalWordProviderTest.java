@@ -18,6 +18,7 @@ public class InternalWordProviderTest {
     @Before
     public void setUp() throws Exception {
         this.item = new InternalWordProvider();
+        this.item.words.clear();
     }
 
     @Test
